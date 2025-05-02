@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Poe part 2</string>
+    <string name="styled_text">Wise<font color="#00ADB5">Saver</font></string>
+    <string name="styled_text2">W<font color="#00ADB5">e</font>lc<font color="#00ADB5">o</font>m<font color="#00ADB5">e</font></string>
+    <string name="guide"><font color="#00ADB5">How to use guide</font></string>
+    <string name="succces">Succces</string>
 </resources>

@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.categoryact"
+    namespace = "com.example.poepart2"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.example.categoryact"
+        applicationId = "com.example.poepart2"
         minSdk = 27
         targetSdk = 35
         versionCode = 1
