@@ -2,4 +2,8 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="wisesaverbackground">#222831</color>
+    <color name="wisesaverblue">#00ADB5</color>
+    <color name="wisesaver_navbar">#EEEEEE</color>
+    <color name="wisesaver_grey">#393E46</color>
 </resources>
