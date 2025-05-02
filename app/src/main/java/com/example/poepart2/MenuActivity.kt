@@ -17,40 +17,41 @@ class MenuActivity : AppCompatActivity() {
         setContentView(R.layout.activity_menu)
 
         drawerLayout = findViewById(R.id.main_drawer)
-        val menuIcon = findViewById<ImageView>(R.id.menu_icon)
+        val menuIcon = findViewById<ImageView>(R.id.menuIcon)
 
         menuIcon.setOnClickListener {
             drawerLayout.openDrawer(R.id.custom_nav_drawer2)
         }
-        val acc= findViewById<TextView>(R.id.acc)
-        acc.setOnClickListener {
-            val intent = Intent(this, GuideActivity::class.java)
-            startActivity(intent)
-        }
-        val languageText = findViewById<TextView>(R.id.languageText)
-        languageText.setOnClickListener {
-            val intent = Intent(this, GuideActivity::class.java)
-            startActivity(intent)
-        }
+
+        //  val languageText = findViewById<TextView>(R.id.languageText)
+        //  languageText.setOnClickListener {
+        //    val intent = Intent(this, GuideActivity::class.java)
+        //   startActivity(intent)
+        // }
         val contactSupport = findViewById<TextView>(R.id.contactSupport)
         contactSupport .setOnClickListener {
-            val intent = Intent(this, GuideActivity::class.java)
+            val intent = Intent(this, SupportActivity::class.java)
             startActivity(intent)
         }
         val cat = findViewById<TextView>(R.id.cat)
-        cat.setOnClickListener {
-            val intent = Intent(this, GuideActivity::class.java)
-            startActivity(intent)
+         cat.setOnClickListener {
+          val intent = Intent(this, CategoryActivity::class.java)
+          startActivity(intent)
         }
-        val curr = findViewById<TextView>(R.id.curr)
-        curr.setOnClickListener {
-            val intent = Intent(this, GuideActivity::class.java)
-            startActivity(intent)
-        }
-        val rank = findViewById<TextView>(R.id.rank)
-        rank.setOnClickListener {
-            val intent = Intent(this, GuideActivity::class.java)
-            startActivity(intent)
-        }
+         val acc= findViewById<TextView>(R.id.acc)
+         acc.setOnClickListener { val intent = Intent(this, AccountActivity::class.java)
+          startActivity(intent)
+         }
+        // val curr = findViewById<TextView>(R.id.curr)
+        // curr.setOnClickListener {
+        //    val intent = Intent(this, GuideActivity::class.java)
+        //  startActivity(intent)
+        //  }
+        // val rank = findViewById<TextView>(R.id.rank)
+        //  rank.setOnClickListener {
+        //    val intent = Intent(this, GuideActivity::class.java)
+        //   startActivity(intent)
+        // }
+
     }
 }

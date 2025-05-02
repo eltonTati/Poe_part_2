@@ -49,7 +49,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.21"
-        app:srcCompat="@drawable/wisesaver" />
+        app:srcCompat="@drawable/wisesaver1" />
 
     <TextView
         android:id="@+id/textView2"

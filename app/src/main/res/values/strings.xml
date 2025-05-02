@@ -4,4 +4,19 @@
     <string name="styled_text2">W<font color="#00ADB5">e</font>lc<font color="#00ADB5">o</font>m<font color="#00ADB5">e</font></string>
     <string name="guide"><font color="#00ADB5">How to use guide</font></string>
     <string name="succces">Succces</string>
+    <string name="title_account_management">Account Management</string>
+    <string name="label_current_account">CURRENT ACCOUNT:</string>
+    <string name="label_other_accounts">OTHER ACCOUNTS:</string>
+    <string name="text_cheque_account">Cheque Account</string>
+    <string name="text_savings_account">Savings Account</string>
+    <string name="bank_nedbank">Nedbank</string>
+    <string name="bank_standardbank">Standard Bank</string>
+    <string name="masked_nedbank">************1568</string>
+    <string name="masked_standardbank">************8467</string>
+    <string name="btn_add_account">Add Account</string>
+    <!--  Image Descriptions  -->
+    <string name="back_icon">Back</string>
+    <string name="dropdown_icon">Dropdown</string>
+    <string name="nedbank_logo">Nedbank Logo</string>
+    <string name="standardbank_logo">Standard Bank Logo</string>
 </resources>

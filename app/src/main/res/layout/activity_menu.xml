@@ -35,9 +35,9 @@
                 android:textStyle="bold" />
 
             <ImageView
-                android:id="@+id/menu_icon"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:id="@+id/menuIcon"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
                 android:src="@drawable/ic_baseline_menu_24" />
         </LinearLayout>
 
@@ -256,7 +256,7 @@
         </FrameLayout>
 
         <ImageView
-            android:id="@+id/nav_analysis"
+            android:id="@+id/navAnalysis"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -264,7 +264,7 @@
             android:src="@drawable/analitics" />
 
         <ImageView
-            android:id="@+id/nav_transactions"
+            android:id="@+id/navTransactions"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -396,7 +396,7 @@
             <ImageView
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:src="@drawable/vector"
+                android:src="@drawable/vector1"
                 app:tint="#FFFFFF" />
 
             <TextView
