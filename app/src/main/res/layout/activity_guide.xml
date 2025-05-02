@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#222831">
+
+    <!-- Back arrow -->
+
+    <!-- Title -->
+
+    <!-- Scrollable instructions -->
+
+    <ImageView
+        android:id="@+id/backArrow"
+        android:layout_width="46dp"
+        android:layout_height="39dp"
+        android:layout_margin="16dp"
+        android:src="@drawable/arrowback"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.043"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.054"
+        app:tint="#00ADB5" />
+
+    <TextView
+        android:id="@+id/guideTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="How to Use WiseSaver"
+        android:textColor="#00ADB5"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="289dp"
+        android:layout_height="349dp"
+        android:layout_margin="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.562">
+
+        <TextView
+            android:id="@+id/howToUseText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="8dp"
+            android:text="• Set budget goals and track your progress\n\n• Add daily, weekly or monthly expenses\n\n• Categorise your expenses by type (food, transport...)\n\n• View statistics and get insights about your savings\n\n• Earn rankings based on how much you save\n\n• Create custom categories\n\n• Choose which account to use when saving\n\nThis guide helps you start easily and stay in control of your money!"
+            android:textColor="#EEEEEE"
+            android:textSize="14sp" />
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>t>
