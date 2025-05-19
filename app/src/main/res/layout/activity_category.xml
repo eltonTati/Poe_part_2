@@ -1,0 +1,39 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:background="#1C1F26">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+        <!--  Header  -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+            <ImageView android:id="@+id/backArrow" android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/arrow_2"/>
+            <TextView android:layout_marginStart="12dp" android:text="Categories" android:textSize="18sp" android:textColor="#FFFFFF" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <!--  Income Title  -->
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:background="#00BFCB" android:gravity="center" android:padding="12dp" android:text="Income" android:textColor="#000000" android:textSize="16sp"/>
+        <!--  Income Items  -->
+        <LinearLayout android:layout_marginTop="12dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:padding="12dp" android:background="#2B2F38" android:gravity="center_vertical">
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Salary" android:textColor="#FFFFFF" android:textSize="16sp"/>
+            <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/menuselct"/>
+        </LinearLayout>
+        <LinearLayout android:layout_marginTop="8dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:padding="12dp" android:background="#2B2F38" android:gravity="center_vertical">
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Investments" android:textColor="#FFFFFF" android:textSize="16sp"/>
+            <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/menuselct"/>
+        </LinearLayout>
+        <!--  Expenses Title  -->
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:background="#00BFCB" android:gravity="center" android:padding="12dp" android:text="Expenses" android:textColor="#050505"/>
+        <!--  Expense Items  -->
+        <!--  Repeat for each item like above  -->
+        <LinearLayout android:layout_marginTop="12dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:padding="12dp" android:background="#2B2F38" android:gravity="center_vertical">
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Rent" android:textColor="#FFFFFF" android:textSize="16sp"/>
+            <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/menuselct"/>
+        </LinearLayout>
+        <!--  Repeat for Groceries and Electricity  -->
+        <LinearLayout android:layout_marginTop="8dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:padding="12dp" android:background="#2B2F38" android:gravity="center_vertical">
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Groceries" android:textColor="#FFFFFF" android:textSize="16sp"/>
+            <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/menuselct"/>
+        </LinearLayout>
+        <LinearLayout android:layout_marginTop="8dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:padding="12dp" android:background="#2B2F38" android:gravity="center_vertical">
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Electricity" android:textColor="#FFFFFF" android:textSize="16sp"/>
+            <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/menuselct"/>
+        </LinearLayout>
+        <!--  Floating Action Button  -->
+        <ImageButton android:id="@+id/addCategoryButton" android:layout_width="56dp" android:layout_height="56dp" android:layout_gravity="end" android:layout_marginTop="24dp" android:background="@drawable/addplus_png" android:backgroundTint="#00BFCB" android:src="@drawable/addplus_png" android:contentDescription="Add category"/>
+    </LinearLayout>
+</ScrollView>
