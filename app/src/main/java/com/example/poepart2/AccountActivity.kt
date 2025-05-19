@@ -26,6 +26,7 @@ class AccountActivity : AppCompatActivity() {
         // ➕ Add Account button click
         findViewById<Button>(R.id.add_account_btn).setOnClickListener {
             Toast.makeText(this, "Add Account clicked", Toast.LENGTH_SHORT).show()
+            //
         }
     }
 }
