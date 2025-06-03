@@ -20,9 +20,9 @@
             android:id="@+id/header"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center_vertical|start"
             android:orientation="horizontal"
-            android:padding="16dp"
-            android:gravity="center_vertical|start">
+            android:padding="16dp">
 
             <TextView
                 android:id="@+id/welcome_text"
@@ -36,8 +36,8 @@
 
             <ImageView
                 android:id="@+id/menuIcon"
-                android:layout_width="42dp"
-                android:layout_height="42dp"
+                android:layout_width="69dp"
+                android:layout_height="58dp"
                 android:src="@drawable/ic_baseline_menu_24" />
         </LinearLayout>
 

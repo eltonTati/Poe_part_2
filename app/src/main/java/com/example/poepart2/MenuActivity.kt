@@ -6,6 +6,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.drawerlayout.widget.DrawerLayout
+import androidx.core.view.GravityCompat
 
 class MenuActivity : AppCompatActivity() {
 
@@ -19,15 +20,16 @@ class MenuActivity : AppCompatActivity() {
         drawerLayout = findViewById(R.id.main_drawer)
         val menuIcon = findViewById<ImageView>(R.id.menuIcon)
 
-        menuIcon.setOnClickListener {
-            drawerLayout.openDrawer(R.id.custom_nav_drawer2)
+        menuIcon.setOnClickListener() {
+            drawerLayout.openDrawer(GravityCompat.END)
+
         }
 
-        //  val languageText = findViewById<TextView>(R.id.languageText)
-        //  languageText.setOnClickListener {
-        //    val intent = Intent(this, GuideActivity::class.java)
-        //   startActivity(intent)
-        // }
+          val languageText = findViewById<TextView>(R.id.languageText)
+         languageText.setOnClickListener {
+        val intent = Intent(this, LanguageSelectionActivity::class.java)
+           startActivity(intent)
+         }
         val contactSupport = findViewById<TextView>(R.id.contactSupport)
         contactSupport .setOnClickListener {
             val intent = Intent(this, SupportActivity::class.java)
@@ -42,16 +44,16 @@ class MenuActivity : AppCompatActivity() {
          acc.setOnClickListener { val intent = Intent(this, AccountActivity::class.java)
           startActivity(intent)
          }
-        // val curr = findViewById<TextView>(R.id.curr)
-        // curr.setOnClickListener {
-        //    val intent = Intent(this, GuideActivity::class.java)
-        //  startActivity(intent)
-        //  }
-        // val rank = findViewById<TextView>(R.id.rank)
-        //  rank.setOnClickListener {
-        //    val intent = Intent(this, GuideActivity::class.java)
-        //   startActivity(intent)
-        // }
+         val curr = findViewById<TextView>(R.id.curr)
+        curr.setOnClickListener {
+            val intent = Intent(this, CurrencySettingsActivity::class.java)
+          startActivity(intent)
+          }
+         val rank = findViewById<TextView>(R.id.rank)
+         rank.setOnClickListener {
+         val intent = Intent(this, MyRanking::class.java)
+          startActivity(intent)
+         }
 
     }
 }

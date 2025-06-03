@@ -28,10 +28,23 @@
             android:name=".CategoryActivity"
             android:exported="false" />
         <activity
+            android:name=".LanguageSelectionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RankMilestoneActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MyRanking"
+            android:exported="false" />
+        <activity
+            android:name=".CurrencySettingsActivity"
+            android:exported="false" />
+        <activity
             android:name=".DrawerLayout"
             android:exported="false"
             tools:ignore="MissingClass" />
         <activity
+
             android:name=".SupportActivity"
             android:exported="false" />
         <activity
