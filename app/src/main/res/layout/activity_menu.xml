@@ -36,8 +36,8 @@
 
             <ImageView
                 android:id="@+id/menuIcon"
-                android:layout_width="69dp"
-                android:layout_height="58dp"
+                android:layout_width="45dp"
+                android:layout_height="48dp"
                 android:src="@drawable/ic_baseline_menu_24" />
         </LinearLayout>
 

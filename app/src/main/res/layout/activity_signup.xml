@@ -1,4 +1,4 @@
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:background="#1C1F2E" android:padding="24dp">
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:background="#222831" android:padding="24dp">
     <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:gravity="center_horizontal">
         <!--  Piggybank Icon  -->
         <ImageView android:layout_width="100dp" android:layout_height="100dp" android:layout_marginTop="24dp" android:src="@drawable/ic_piggybank" android:contentDescription="Piggybank Icon"/>
@@ -12,6 +12,15 @@
         <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Password*" android:textColor="#FFFFFF" android:layout_marginTop="24dp" android:textSize="14sp"/>
         <EditText android:id="@+id/passwordEditText" android:layout_width="match_parent" android:layout_height="50dp" android:background="@drawable/rounded_edittext" android:hint="******" android:inputType="textPassword" android:paddingHorizontal="12dp" android:textColor="#FFFFFF" android:textColorHint="#888888"/>
         <!--  Register Button  -->
-        <Button android:id="@+id/registerButton" android:layout_width="match_parent" android:layout_height="50dp" android:layout_marginTop="36dp" android:backgroundTint="#00C2CB" android:text="Register" android:textAllCaps="false" android:textColor="#FFFFFF" android:background="@drawable/rounded_button"/>
+        <Button
+            android:id="@+id/registerButton"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="36dp"
+            android:background="@drawable/rounded_button"
+            android:backgroundTint="#00ADB5"
+            android:text="Register"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF" />
     </LinearLayout>
 </ScrollView>

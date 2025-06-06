@@ -51,9 +51,24 @@ class MenuActivity : AppCompatActivity() {
           }
          val rank = findViewById<TextView>(R.id.rank)
          rank.setOnClickListener {
-         val intent = Intent(this, MyRanking::class.java)
+         val intent = Intent(this, MyRankingActivity::class.java)
           startActivity(intent)
          }
+        val wallet = findViewById<ImageView>(R.id.navTransactions)
+        wallet.setOnClickListener {
+            val intent = Intent(this, WalletScreenActivity::class.java)
+            startActivity(intent)
+        }
+        val analytics = findViewById<ImageView>(R.id.navAnalysis)
+        analytics.setOnClickListener {
+            val intent = Intent(this, AnalyticsScreenActivity::class.java)
+            startActivity(intent)
+        }
+        val user = findViewById<ImageView>(R.id.nav_settings)
+        user.setOnClickListener {
+            val intent = Intent(this, UserScreenActivity::class.java)
+            startActivity(intent)
+        }
 
     }
 }

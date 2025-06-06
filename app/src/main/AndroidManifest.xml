@@ -31,10 +31,13 @@
             android:name=".LanguageSelectionActivity"
             android:exported="false" />
         <activity
+            android:name=".UserScreenActivity"
+            android:exported="false" />
+        <activity
             android:name=".RankMilestoneActivity"
             android:exported="false" />
         <activity
-            android:name=".MyRanking"
+            android:name=".MyRankingActivity"
             android:exported="false" />
         <activity
             android:name=".CurrencySettingsActivity"
