@@ -39,10 +39,8 @@ android {
 }
 
 dependencies {
-    // ✅ Firebase BoM - gère automatiquement les versions compatibles
+    // ✅ Firebase BoM
     implementation(platform("com.google.firebase:firebase-bom:32.7.0"))
-
-    // ✅ Firebase (versions gérées par BoM)
     implementation("com.google.firebase:firebase-auth-ktx")
     implementation("com.google.firebase:firebase-firestore-ktx")
 
@@ -57,6 +55,10 @@ dependencies {
     implementation("androidx.room:room-runtime:2.6.1")
     kapt("androidx.room:room-compiler:2.6.1")
     implementation("androidx.room:room-ktx:2.6.1")
+
+    // ✅ Glide for image loading
+    implementation("com.github.bumptech.glide:glide:4.16.0")
+    kapt("com.github.bumptech.glide:compiler:4.16.0")
 
     // ✅ Test Libraries
     testImplementation(libs.junit)
