@@ -20,7 +20,7 @@ class ChoiseActivity : AppCompatActivity() {
         }
         val loginButton = findViewById<Button>(R.id.login_button)
         loginButton.setOnClickListener {
-            val intent = Intent(this, SignupActivity::class.java)// add elton
+            val intent = Intent(this, LoginActivity::class.java)// add elton
             startActivity(intent)
         }
     }

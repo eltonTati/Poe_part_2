@@ -155,6 +155,16 @@
             android:padding="12dp">
 
             <ImageView
+                android:id="@+id/dropdown_icon2"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:contentDescription="@string/dropdown_icon"
+                android:src="@drawable/ic_dropdown"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
                 android:id="@+id/standardbank_logo"
                 android:layout_width="40dp"
                 android:layout_height="40dp"

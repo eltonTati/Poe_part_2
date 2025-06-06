@@ -1,23 +1,143 @@
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:background="#222831" android:padding="24dp">
-    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:gravity="center_horizontal">
-        <!--  Piggybank Icon  -->
-        <ImageView android:layout_width="100dp" android:layout_height="100dp" android:layout_marginTop="24dp" android:src="@drawable/ic_piggybank" android:contentDescription="Piggybank Icon"/>
-        <!--  Full Name  -->
-        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Full Name*" android:textColor="#FFFFFF" android:layout_marginTop="32dp" android:textSize="14sp"/>
-        <EditText android:id="@+id/fullNameEditText" android:layout_width="match_parent" android:layout_height="50dp" android:background="@drawable/rounded_edittext" android:hint="Your full name here..." android:paddingHorizontal="12dp" android:textColor="#FFFFFF" android:textColorHint="#888888"/>
-        <!--  Email  -->
-        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Email*" android:textColor="#FFFFFF" android:layout_marginTop="24dp" android:textSize="14sp"/>
-        <EditText android:id="@+id/emailEditText" android:layout_width="match_parent" android:layout_height="50dp" android:background="@drawable/rounded_edittext" android:hint="emailhere@domain.com" android:inputType="textEmailAddress" android:paddingHorizontal="12dp" android:textColor="#FFFFFF" android:textColorHint="#888888"/>
-        <!--  Password  -->
-        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Password*" android:textColor="#FFFFFF" android:layout_marginTop="24dp" android:textSize="14sp"/>
-        <EditText android:id="@+id/passwordEditText" android:layout_width="match_parent" android:layout_height="50dp" android:background="@drawable/rounded_edittext" android:hint="******" android:inputType="textPassword" android:paddingHorizontal="12dp" android:textColor="#FFFFFF" android:textColorHint="#888888"/>
-        <!--  Register Button  -->
-        <Button
-            android:id="@+id/registerButton"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#222831"
+    android:padding="24dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <!-- Piggybank Icon -->
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="24dp"
+            android:src="@drawable/ic_piggybank"
+            android:contentDescription="Piggybank Icon" />
+
+        <!-- Full Name -->
+        <TextView
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
+            android:text="Full Name*"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="32dp"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+            <ImageView
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/baseline_account_circle_24" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/signup_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Your full name here..."
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#888888" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+        <!-- Email -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Email*"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="24dp"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+            <ImageView
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/mail_outline" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/signup_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="email@domain.com"
+                    android:inputType="textEmailAddress"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#888888" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+        <!-- Password -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Password*"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="24dp"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+            <ImageView
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/password" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/signup_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="******"
+                    android:inputType="textPassword"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#888888" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+        <!-- Register Button -->
+        <Button
+            android:id="@+id/signup_button"
+            android:layout_width="255dp"
+            android:layout_height="52dp"
             android:layout_marginTop="36dp"
-            android:background="@drawable/rounded_button"
             android:backgroundTint="#00ADB5"
             android:text="Register"
             android:textAllCaps="false"

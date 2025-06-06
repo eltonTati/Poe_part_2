@@ -52,6 +52,7 @@
         android:gravity="center">
 
         <TextView
+            android:tag="Total Balance"
             android:text="Total Balance\nR 8790"
             android:textColor="#FFFFFF"
             android:layout_weight="1"
@@ -60,6 +61,7 @@
             android:textAlignment="center" />
 
         <TextView
+            android:tag="Expenses"
             android:text="Expenses\nR 1200"
             android:textColor="#FF5722"
             android:layout_weight="1"
@@ -68,6 +70,7 @@
             android:textAlignment="center" />
 
         <TextView
+            android:tag="Actual Balance"
             android:text="Actual Balance\nR 7590"
             android:textColor="#FFFFFF"
             android:layout_weight="1"
