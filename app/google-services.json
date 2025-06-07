@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "643983073670",
+    "firebase_url": "https://wisesaverdb-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "wisesaverdb",
+    "storage_bucket": "wisesaverdb.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:643983073670:android:7ae21e806cda47d03c8c07",
+        "android_client_info": {
+          "package_name": "com.example.poepart2"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAEUA1hlF0hiKqXpUGFpZQ6sUNGCQELV7Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

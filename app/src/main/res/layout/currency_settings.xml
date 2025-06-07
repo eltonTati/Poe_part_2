@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#1C1F26"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Top Bar with Back Arrow and Title -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/backArrow"
+            android:layout_width="wrap_content"
+            android:layout_height="55dp"
+            android:contentDescription="Back"
+            android:src="@drawable/arrow_4" />
+
+        <TextView
+            android:layout_marginStart="12dp"
+            android:text="Currency Settings"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <!-- Spacer -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="24dp" />
+
+    <!-- Default Currency Dropdown -->
+    <LinearLayout
+        android:padding="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:contentDescription="SA Flag"
+            android:src="@drawable/flag_south_africa__streamline_emojitwo_svg" />
+
+        <TextView
+            android:layout_marginStart="12dp"
+            android:text="Default Currency:\nZAR (South Africa)"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:contentDescription="Dropdown"
+            android:src="@drawable/tailless_line_arrow_down_square__streamline_core_png" />
+    </LinearLayout>
+
+    <!-- Spacer -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="16dp" />
+
+    <!-- Conversion Button -->
+    <Button
+        android:id="@+id/convertbtn"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:backgroundTint="#00BFCB"
+        android:text="Currency Conversion"
+        android:textColor="#FFFFFF" />
+
+    <!-- Spacer -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="16dp" />
+
+    <!-- From Currency -->
+    <LinearLayout
+         android:padding="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:contentDescription="SA Flag"
+            android:src="@drawable/flag_south_africa__streamline_emojitwo_svg" />
+
+        <EditText
+            android:id="@+id/etRandInput"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="12dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:hint="R0.00"
+            android:inputType="numberDecimal"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#AAAAAA"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:contentDescription="Dropdown"
+            android:src="@drawable/tailless_line_arrow_down_square__streamline_core_png" />
+    </LinearLayout>
+
+    <!-- Arrow Down -->
+    <ImageView
+        android:layout_width="45dp"
+        android:layout_height="37dp"
+        android:layout_gravity="center"
+        android:layout_marginVertical="12dp"
+        android:contentDescription="Arrow"
+        android:src="@drawable/arrow_10" />
+
+    <!-- To Currency -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="12dp">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:contentDescription="US Flag"
+            android:src="@drawable/flag_u_s__outlying_islands__streamline_emojitwo_svg" />
+
+        <TextView
+            android:id="@+id/tvDollarOutput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_weight="1"
+            android:text="$0.00"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:contentDescription="Dropdown"
+            android:src="@drawable/tailless_line_arrow_down_square__streamline_core_png" />
+    </LinearLayout>
+
+</LinearLayout>
