@@ -8,4 +8,4 @@ Group Members:
 WiseSaver is a user-friendly mobile application designed to help users manage their savings with gamified incentives and useful financial tools such as currency conversion.
 
  
-YOUTUBE VIDEO LINK: https://youtube.com/shorts/kJUJ7C3H9B8?feature=share
+YOUTUBE VIDEO LINK: 
