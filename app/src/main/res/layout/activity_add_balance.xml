@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1E222B"
+    android:padding="16dp"
+    tools:context=".AddBalanceActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Top Nav -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="24dp">
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="35dp"
+                android:contentDescription="Back"
+                android:src="@drawable/arrow_4" />
+        </LinearLayout>
+
+        <!-- Wallet Balance Title -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="WALLET BALANCE"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:paddingBottom="8dp" />
+
+        <!-- Wallet Balance Display -->
+        <TextView
+            android:id="@+id/textViewBalance"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:background="@drawable/balance_background"
+            android:text="R0"
+            android:textColor="#00E0D1"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:paddingHorizontal="24dp"
+            android:textSize="16sp"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Add Balance -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="8dp"
+            android:gravity="center"
+            android:text="Add Balance"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp" />
+
+        <!-- Amount Input -->
+        <EditText
+            android:id="@+id/editTextAmount"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Enter amount"
+            android:background="@drawable/edit_text_bg"
+            android:paddingStart="12dp"
+            android:textColorHint="#CCCCCC"
+            android:textColor="#FFFFFF"
+            android:inputType="numberDecimal" />
+
+        <!-- Info -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="16dp"
+            android:text="You May Enter An Amount Of Your Choice"
+            android:textColor="#999999"
+            android:textSize="12sp" />
+
+        <!-- Date Picker -->
+        <EditText
+            android:id="@+id/editTextDate"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Date"
+            android:drawableEnd="@drawable/ic_calendar"
+            android:background="@drawable/edit_text_bg"
+            android:paddingStart="12dp"
+            android:textColorHint="#CCCCCC"
+            android:textColor="#FFFFFF"
+            android:focusable="false"
+            android:clickable="true"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Label -->
+        <EditText
+            android:id="@+id/editTextLabel"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Label"
+            android:background="@drawable/edit_text_bg"
+            android:paddingStart="12dp"
+            android:textColorHint="#CCCCCC"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Category Spinner -->
+        <Spinner
+            android:id="@+id/spinnerCategory"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/edit_text_bg"
+            android:paddingStart="12dp"
+            android:layout_marginBottom="24dp"
+            android:popupBackground="#1E222B" />
+
+        <!-- Add Button -->
+        <Button
+            android:id="@+id/buttonAdd"
+            android:layout_width="255dp"
+            android:layout_height="52dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="36dp"
+            android:backgroundTint="#00ADB5"
+            android:text="Add"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+
+</ScrollView>

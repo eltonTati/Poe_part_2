@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="SpinnerTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:textColor">#FFFFFF</item> <!-- white text -->
+        <item name="android:popupBackground">#00BCD4</item> <!-- dark dropdown -->
+    </style>
+</resources>

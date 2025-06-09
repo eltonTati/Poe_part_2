@@ -52,12 +52,13 @@
 
         <ProgressBar
             android:id="@+id/progress_bar"
-            android:layout_width="match_parent"
-            android:layout_height="10dp"
             style="?android:attr/progressBarStyleHorizontal"
-            android:progress="30"
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
             android:max="100"
-            android:layout_marginVertical="8dp" />
+            android:progress="30"
+            android:progressDrawable="@drawable/progressbar"
+            android:scaleY="1.8" />
 
         <TextView
             android:layout_width="wrap_content"
