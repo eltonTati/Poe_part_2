@@ -43,12 +43,7 @@
                 android:layout_height="0dp" />
 
             <!-- Menu Icon pushed to far right -->
-            <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:contentDescription="Menu"
-                android:src="@drawable/vector"
-                />
+
         </LinearLayout>
 
 
@@ -58,6 +53,7 @@
 
         <!-- Bronze -->
         <LinearLayout
+            android:id="@+id/bronzeLayout"
             android:padding="12dp"
             android:layout_marginBottom="12dp"
             android:orientation="horizontal"
@@ -97,6 +93,7 @@
 
         <!-- Silver -->
         <LinearLayout
+            android:id="@+id/silverLayout"
             android:padding="12dp"
             android:layout_marginBottom="12dp"
             android:orientation="horizontal"
@@ -112,6 +109,7 @@
                 android:src="@drawable/image_6" />
 
             <LinearLayout
+
                 android:orientation="vertical"
                 android:layout_marginStart="12dp"
                 android:layout_width="wrap_content"
@@ -136,6 +134,7 @@
 
         <!-- Gold -->
         <LinearLayout
+            android:id="@+id/goldLayout"
             android:padding="12dp"
             android:layout_marginBottom="12dp"
             android:orientation="horizontal"
@@ -176,6 +175,7 @@
 
         <!-- Platinum -->
         <LinearLayout
+            android:id="@+id/platinumLayout"
             android:padding="12dp"
             android:orientation="horizontal"
             android:background="@drawable/bg_border_platinum"

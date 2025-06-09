@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1B1F2B"
+    android:padding="24dp">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:text="ADD NEW ACCOUNT"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/accountCard"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Card-style container -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/accountCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:cardCornerRadius="16dp"
+        app:cardBackgroundColor="#2C2F3F"
+        app:layout_constraintTop_toBottomOf="@id/titleText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Account Name -->
+            <EditText
+                android:id="@+id/accountNameInput"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Account Name"
+                android:background="@drawable/input_field_bg"
+                android:padding="12dp"
+                android:textColorHint="#00BFCB"
+                android:textColor="#FFFFFF" />
+
+            <!-- Account Number -->
+            <EditText
+                android:id="@+id/accountNumberInput"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Account Number"
+                android:background="@drawable/input_field_bg"
+                android:padding="12dp"
+                android:textColorHint="#00BFCB"
+                android:textColor="#FFFFFF"
+                android:layout_marginTop="12dp" />
+
+            <!-- Account Type -->
+            <EditText
+                android:id="@+id/accountTypeInput"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Account Type"
+                android:background="@drawable/input_field_bg"
+                android:padding="12dp"
+                android:textColorHint="#00BFCB"
+                android:textColor="#FFFFFF"
+                android:layout_marginTop="12dp" />
+
+            <!-- Attach File -->
+            <Button
+                android:id="@+id/attachFileButton"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="12dp"
+                android:backgroundTint="#00BCC4"
+                android:text="Attach File"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Add Button -->
+    <Button
+        android:id="@+id/addButton"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="315dp"
+        android:backgroundTint="#00BFCB"
+        android:text="ADD"
+        android:textAllCaps="true"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/cancelButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/accountCard" />
+
+    <!-- Cancel Button -->
+    <Button
+        android:id="@+id/cancelButton"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="315dp"
+        android:backgroundTint="#FFFFFF"
+        android:text="Cancel"
+        android:textColor="#1B1F2B"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/addButton"
+        app:layout_constraintTop_toBottomOf="@id/accountCard" />
+</androidx.constraintlayout.widget.ConstraintLayout>

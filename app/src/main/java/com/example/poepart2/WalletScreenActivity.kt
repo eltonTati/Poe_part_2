@@ -3,6 +3,7 @@ package com.example.poepart2
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -31,6 +32,22 @@ class WalletScreenActivity : AppCompatActivity() {
         addButton.setOnClickListener {
             val intent = Intent(this, AddBalanceActivity::class.java)
             startActivity(intent)
+        }
+        findViewById<ImageView>(R.id.nav_home).setOnClickListener {
+            startActivity(Intent(this, MenuActivity::class.java))
+        }
+
+        findViewById<ImageView>(R.id.navAnalysis).setOnClickListener {
+            startActivity(Intent(this, AnalyticsScreenActivity::class.java))
+        }
+        findViewById<ImageView>(R.id.nav_settings).setOnClickListener {
+            startActivity(Intent(this, UserScreenActivity::class.java))
+        }
+        findViewById<Button>(R.id.transactions_button).setOnClickListener {
+            startActivity(Intent(this, TransactionHistoryActivity::class.java))
+        }
+        findViewById<Button>(R.id.budget_button).setOnClickListener {
+            startActivity(Intent(this, BudgetGoalsActivity::class.java))
         }
     }
 

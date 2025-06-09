@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#222831"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ADD BUDGET GOAL"
+        android:textColor="#FFFFFF"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginTop="24dp"/>
+
+    <!-- Form container -->
+    <LinearLayout
+        android:id="@+id/formContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titleText"
+        android:layout_marginTop="32dp"
+        android:orientation="vertical"
+        android:background="@drawable/edit_text_backgroung_2"
+        android:padding="24dp"
+        android:layout_centerHorizontal="true">
+
+        <!-- Amount -->
+        <EditText
+            android:id="@+id/amountEditText"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/edittext_bacground"
+            android:hint="Amount"
+            android:inputType="numberDecimal"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#79747E"
+            android:padding="16dp" />
+
+        <!-- Budget Name -->
+        <EditText
+            android:id="@+id/budgetNameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/edittext_bacground"
+            android:hint="Budget Name"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#79747E"
+            android:padding="16dp" />
+
+        <!-- Recurrence dropdown -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="16dp">
+
+            <AutoCompleteTextView
+                android:id="@+id/recurrenceDropdown"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/edittext_bacground"
+                android:hint="Recurrence"
+                android:paddingStart="16dp"
+                android:paddingEnd="48dp"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#79747E"
+                android:dropDownHeight="wrap_content"
+                android:dropDownWidth="match_parent"
+                android:dropDownVerticalOffset="10dp" />
+
+            <ImageView
+                android:id="@+id/dropdownIcon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/drop"
+                android:clickable="true"
+                android:focusable="true"/>
+        </RelativeLayout>
+
+        <!-- Buttons container -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnAdd"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="12dp"
+                android:backgroundTint="#00ADB5"
+                android:text="ADD"
+                android:textColor="#FFFFFF" />
+
+            <Button
+                android:id="@+id/btnCancel"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:backgroundTint="#FFFFFF"
+                android:text="Cancel"
+                android:textColor="#393E46" />
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>

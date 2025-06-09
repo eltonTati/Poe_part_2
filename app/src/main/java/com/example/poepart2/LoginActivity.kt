@@ -44,6 +44,11 @@ class LoginActivity : AppCompatActivity() {
 
             loginUser(email, password)
         }
+        val loginButton = findViewById<Button>(R.id.login_button)
+        loginButton.setOnClickListener {
+            val intent = Intent(this, SignupActivity::class.java)// add elton
+            startActivity(intent)
+        }
     }
 
     private fun loginUser(email: String, password: String) {

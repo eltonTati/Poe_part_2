@@ -22,6 +22,7 @@
             android:paddingBottom="24dp">
 
             <ImageView
+                android:id="@+id/backArrow"
                 android:layout_width="45dp"
                 android:layout_height="35dp"
                 android:contentDescription="Back"

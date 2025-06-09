@@ -16,7 +16,13 @@
             android:name=".AddCategoryScreenActivity"
             android:exported="false" />
         <activity
-            android:name=".CategoryScreenActivity"
+            android:name=".TransactionHistoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AddBudgetGoalActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AddTransactionActivity"
             android:exported="false" />
         <activity
             android:name=".AnalyticsScreenActivity"
@@ -34,8 +40,15 @@
             android:name=".UserScreenActivity"
             android:exported="false" />
         <activity
+            android:name=".AddBudgetGoalActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BudgetGoalsActivity"
+            android:exported="false" />
+        <activity
             android:name=".LoginActivity"
             android:exported="false" />
+
         <activity
             android:name=".AddBalanceActivity"
             android:exported="false" />
@@ -52,9 +65,8 @@
             android:name=".CurrencySettingsActivity"
             android:exported="false" />
         <activity
-            android:name=".DrawerLayout"
-            android:exported="false"
-            tools:ignore="MissingClass" />
+            android:name=".AddNewAccountActivity"
+            android:exported="false" />
         <activity
 
             android:name=".SupportActivity"

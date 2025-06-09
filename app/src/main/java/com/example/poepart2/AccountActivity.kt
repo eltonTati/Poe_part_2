@@ -1,5 +1,6 @@
 package com.example.poepart2
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
@@ -14,18 +15,19 @@ class AccountActivity : AppCompatActivity() {
         setContentView(R.layout.activity_account_management)
 
         // 🔙 Back button click
-        findViewById<ImageView>(R.id.back_icon).setOnClickListener {
-            Toast.makeText(this, "Back pressed", Toast.LENGTH_SHORT).show()
+        findViewById<ImageView>(R.id.back_arrow).setOnClickListener {
+            finish()
         }
 
         // ⬇️ Dropdown icon click
         findViewById<ImageView>(R.id.dropdown_icon).setOnClickListener {
-            Toast.makeText(this, "Dropdown clicked", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "comming soon", Toast.LENGTH_SHORT).show()
         }
 
         // ➕ Add Account button click
         findViewById<Button>(R.id.add_account_btn).setOnClickListener {
-            Toast.makeText(this, "Add Account clicked", Toast.LENGTH_SHORT).show()
+            startActivity(Intent(this, AddNewAccountActivity::class.java))
+
             //
         }
     }

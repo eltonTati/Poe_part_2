@@ -1,6 +1,7 @@
 package com.example.poepart2
 
 import android.app.DatePickerDialog
+import android.content.Intent
 import android.os.Bundle
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
@@ -118,7 +119,12 @@ class AddBalanceActivity : AppCompatActivity() {
                 Toast.makeText(this, "Failed to add to wallet", Toast.LENGTH_SHORT).show()
             }
         }
-
+        val backArrow = findViewById<ImageView>(R.id.backArrow)
+        backArrow.setOnClickListener {
+            val intent = Intent(this, WalletScreenActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
 
     }
 

@@ -69,7 +69,10 @@ class CategoryActivity : AppCompatActivity() {
                     }
                 }
             }
-
+        val backArrow = findViewById<ImageView>(R.id.back_arrow)
+        backArrow.setOnClickListener {
+            finish()
+        }
         val addButton = findViewById<ImageButton>(R.id.addCategoryButton)
         addButton.setOnClickListener {
             startActivity(Intent(this, AddCategoryScreenActivity::class.java))

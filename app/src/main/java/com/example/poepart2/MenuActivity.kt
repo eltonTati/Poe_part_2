@@ -27,8 +27,11 @@ class MenuActivity : AppCompatActivity() {
     private lateinit var mostExpenseText: TextView
     private lateinit var mostExpenseIcon: ImageView
     private lateinit var others: TextView
+    private lateinit var label_other_expenses: TextView
+    private lateinit var perctext: TextView
     private lateinit var othersIcon: ImageView
     private lateinit var otherExpensesList: LinearLayout
+    private lateinit var otherExpensesContainer: LinearLayout
 
     private lateinit var db: FirebaseFirestore
     private lateinit var auth: FirebaseAuth
@@ -46,10 +49,11 @@ class MenuActivity : AppCompatActivity() {
         welcomeText = findViewById(R.id.welcome_text)
         progressBar = findViewById(R.id.progress_bar)
         mostExpenseText = findViewById(R.id.most_expense_text)
-        othersIcon = findViewById(R.id.othersIcons)
-        others = findViewById(R.id.others)
+        label_other_expenses = findViewById(R.id.label_other_expenses)
+        perctext = findViewById(R.id.percentage_text)
         mostExpenseIcon = findViewById(R.id.most_expense_icon)
         otherExpensesList = findViewById(R.id.others_expense_list)
+        otherExpensesContainer = findViewById(R.id.other_expenses_container)
 
         val balanceSection = findViewById<LinearLayout>(R.id.balance_section)
         totalBalanceText = balanceSection.findViewWithTag("Total Balance")
@@ -64,7 +68,6 @@ class MenuActivity : AppCompatActivity() {
         if (currentUser != null) {
             val userId = currentUser.uid
 
-            // Welcome text realtime
             userListener = db.collection("users").document(userId)
                 .addSnapshotListener { document, _ ->
                     if (document != null && document.exists()) {
@@ -73,7 +76,6 @@ class MenuActivity : AppCompatActivity() {
                     }
                 }
 
-            // Balance realtime
             balanceListener = db.collection("balances").document(userId)
                 .addSnapshotListener { doc, _ ->
                     if (doc != null && doc.exists()) {
@@ -81,34 +83,42 @@ class MenuActivity : AppCompatActivity() {
                         val expenses = doc.getDouble("expenses") ?: 0.0
                         val actual = total - expenses
 
+                        // 👇 Ces labels restent inchangés
                         totalBalanceText.text = "Total Balance\nR $total"
                         expensesText.text = "Expenses\nR $expenses"
                         actualBalanceText.text = "Actual Balance\nR $actual"
 
-                        val percentage = if (total != 0.0) ((expenses / total) * 100).toInt() else 0
-                        progressBar.progress = percentage
+                        // 👇 Seulement ici on change : calcul du pourcentage basé sur la somme des goals
+                        db.collection("budget_goals").document(userId)
+                            .collection("goals").get().addOnSuccessListener { goalsSnapshot ->
+                                val totalGoal = goalsSnapshot.sumOf { it.getDouble("amount") ?: 0.0 }
+                                val percentage = if (totalGoal != 0.0) ((expenses / totalGoal) * 100).toInt() else 0
+
+                                progressBar.progress = percentage
+                                perctext.text = "you are at $percentage% of your budget goal"
+                            }
+
                     } else {
                         totalBalanceText.text = "Total Balance\nN/A"
                         expensesText.text = "Expenses\nN/A"
                         actualBalanceText.text = "Actual Balance\nN/A"
                         progressBar.progress = 0
+                        perctext.text = "you are at 0% of your budget goal"
                     }
                 }
 
-            // Expenses realtime (or default if no collection exists)
-            expensesListener = db.collection("expenses")
+            expensesListener = db.collection("transactions")
                 .whereEqualTo("userId", userId)
                 .addSnapshotListener { snapshot, error ->
                     if (error != null || snapshot == null || snapshot.isEmpty) {
                         mostExpenseText.text = "No expenses now"
-                        mostExpenseIcon.setImageResource(0) // Remove image
+                        mostExpenseIcon.setImageResource(0)
 
                         others.text = "No expenses now"
-                        othersIcon.setImageResource(0) // Remove image
+                        othersIcon.setImageResource(0)
                         return@addSnapshotListener
                     }
 
-                    // Get highest expense
                     val expenses = snapshot.documents.mapNotNull { it.data }
                     val sortedExpenses = expenses.sortedByDescending { (it["amount"] as? Number)?.toDouble() ?: 0.0 }
 
@@ -123,16 +133,17 @@ class MenuActivity : AppCompatActivity() {
                         }
                     }
 
-                    // Display others
-                    otherExpensesList.removeAllViews()
-                    val others = sortedExpenses.drop(1)
-                    if (others.isEmpty()) {
+                    // Update other expenses
+                    otherExpensesContainer.removeAllViews()
+                    val othersList = sortedExpenses.drop(1)
+                    if (othersList.isEmpty()) {
                         val none = TextView(this)
                         none.text = "No other expenses"
-                        none.setTextColor(resources.getColor(android.R.color.darker_gray))
-                        otherExpensesList.addView(none)
+                        none.setTextColor(resources.getColor(android.R.color.black))
+                        otherExpensesContainer.addView(none)
                     } else {
-                        for (expense in others) {
+                        label_other_expenses.text = "Other expenses"
+                        for (expense in othersList) {
                             val row = LinearLayout(this).apply {
                                 orientation = LinearLayout.HORIZONTAL
                                 setPadding(8, 8, 8, 8)
@@ -151,11 +162,10 @@ class MenuActivity : AppCompatActivity() {
 
                             row.addView(image)
                             row.addView(text)
-                            otherExpensesList.addView(row)
+                            otherExpensesContainer.addView(row)
                         }
                     }
                 }
-
         } else {
             Toast.makeText(this, "User not logged in", Toast.LENGTH_SHORT).show()
         }
@@ -208,3 +218,4 @@ class MenuActivity : AppCompatActivity() {
         expensesListener?.remove()
     }
 }
+

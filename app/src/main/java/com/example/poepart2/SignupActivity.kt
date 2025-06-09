@@ -128,5 +128,10 @@ class SignupActivity : AppCompatActivity() {
                     }
                 }
         }
+        val loginButton = findViewById<Button>(R.id.login_button)
+        loginButton.setOnClickListener {
+            val intent = Intent(this, LoginActivity::class.java)// add elton
+            startActivity(intent)
+        }
     }
 }

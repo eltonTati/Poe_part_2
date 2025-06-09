@@ -91,18 +91,7 @@
             android:src="@drawable/profile" />
     </LinearLayout>
 
-    <ImageButton
-        android:id="@+id/side_menu_button"
-        android:layout_width="65dp"
-        android:layout_height="56dp"
-        android:backgroundTint="@color/wisesaverbackground"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.921"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.011"
-        app:srcCompat="@drawable/side_menu_button" />
+
 
     <TextView
         android:id="@+id/textView"
@@ -114,6 +103,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="378dp"
+        android:layout_height="386dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.579"
+        app:srcCompat="@drawable/blue_outline_rectangle" />
 
     <Button
         android:id="@+id/transactions_button"
@@ -235,16 +235,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageView8"
-        android:layout_width="378dp"
-        android:layout_height="386dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.484"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.579"
-        app:srcCompat="@drawable/blue_outline_rectangle" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

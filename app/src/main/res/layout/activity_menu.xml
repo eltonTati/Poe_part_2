@@ -41,195 +41,176 @@
                 android:src="@drawable/ic_baseline_menu_24" />
         </LinearLayout>
 
-    <!-- Balance Section -->
-    <LinearLayout
-        android:id="@+id/balance_section"
-        android:layout_below="@id/header"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingHorizontal="16dp"
-        android:gravity="center">
-
-        <TextView
-            android:tag="Total Balance"
-            android:text="Total Balance\nR 8790"
-            android:textColor="#FFFFFF"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:textAlignment="center" />
-
-        <TextView
-            android:tag="Expenses"
-            android:text="Expenses\nR 1200"
-            android:textColor="#FF5722"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:textAlignment="center" />
-
-        <TextView
-            android:tag="Actual Balance"
-            android:text="Actual Balance\nR 7590"
-            android:textColor="#FFFFFF"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:textAlignment="center" />
-    </LinearLayout>
-
-    <!-- Progress bar + goal -->
-    <LinearLayout
-        android:id="@+id/progress_section"
-        android:layout_below="@id/balance_section"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="16dp">
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <ProgressBar
-                android:id="@+id/progress_bar"
-                style="?android:attr/progressBarStyleHorizontal"
-                android:layout_width="match_parent"
-                android:layout_height="20dp"
-                android:max="100"
-                android:progress="30"
-                android:progressDrawable="@drawable/progressbar"
-                android:scaleY="1.8" />
-
-            <!-- Texte par-dessus la barre -->
-            <TextView
-                android:id="@+id/progress_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center|right"
-                android:gravity="right"
-                android:text=""
-                android:textColor="#000000"
-                android:textSize="12sp"
-                android:textStyle="bold" />
-        </FrameLayout>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="You Are At 0% Of Your Expenses Goal"
-            android:textColor="#EEEEEE"
-            android:textSize="14sp"
-            android:gravity="center"
-            android:layout_marginTop="4dp"/>
-    </LinearLayout>
-
-    <!-- DEPENSES ZONE -->
-    <FrameLayout
-        android:id="@+id/expenses_container"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/progress_section"
-        android:background="@drawable/curved_gray_bottom"
-        android:paddingTop="30dp"
-        android:paddingBottom="90dp">
-
-        <!-- Bloc blanc : MOST EXPENSES -->
+        <!-- Balance Section -->
         <LinearLayout
-            android:id="@+id/most_expense_block"
+            android:id="@+id/balance_section"
+            android:layout_below="@id/header"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            android:background="@drawable/bg_white_rounded"
-            android:orientation="vertical"
-            android:padding="20dp">
+            android:orientation="horizontal"
+            android:paddingHorizontal="16dp"
+            android:gravity="center">
 
             <TextView
-                android:id="@+id/label_most_expenses"
-                android:layout_width="wrap_content"
+                android:tag="Total Balance"
+                android:text="Total Balance\nR 8790"
+                android:textColor="#FFFFFF"
+                android:layout_weight="1"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginBottom="8dp"
-                android:text="Most Expenses"
-                android:textColor="#000000"
-                android:textSize="16sp" />
+                android:textAlignment="center" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
+            <TextView
+                android:tag="Expenses"
+                android:text="Expenses\nR 1200"
+                android:textColor="#FF5722"
+                android:layout_weight="1"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center_vertical">
+                android:textAlignment="center" />
 
-                <ImageView
-                    android:id="@+id/most_expense_icon"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_marginLeft="29dp"
-                    app:srcCompat="@drawable/gros" />
-
-                <TextView
-                    android:id="@+id/most_expense_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:text="Groceries:350 R"
-                    android:textColor="#000000"
-                    android:textSize="16sp" />
-            </LinearLayout>
-
+            <TextView
+                android:tag="Actual Balance"
+                android:text="Actual Balance\nR 7590"
+                android:textColor="#FFFFFF"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textAlignment="center" />
         </LinearLayout>
 
-        <!-- Bloc cyan scrollable : OTHER EXPENSES -->
-        <ScrollView
+        <!-- Progress bar + goal -->
+        <LinearLayout
+            android:id="@+id/progress_section"
+            android:layout_below="@id/balance_section"
             android:layout_width="match_parent"
-            android:layout_height="782dp"
-            android:layout_marginTop="135dp"
-            android:background="@drawable/cyancontent">
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
 
-            <LinearLayout
-                android:id="@+id/others_expense_list"
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ProgressBar
+                    android:id="@+id/progress_bar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:max="100"
+                    android:progress="30"
+                    android:progressDrawable="@drawable/progressbar"
+                    android:scaleY="1.8" />
+
+                <TextView
+                    android:id="@+id/progress_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|right"
+                    android:gravity="right"
+                    android:text=""
+                    android:textColor="#000000"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/percentage_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="16dp">
+                android:text=""
+                android:textColor="#EEEEEE"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:layout_marginTop="4dp"/>
+        </LinearLayout>
 
-                <!-- Example line -->
+        <!-- DEPENSES ZONE -->
+        <FrameLayout
+            android:id="@+id/expenses_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/progress_section"
+            android:background="@drawable/curved_gray_bottom"
+            android:paddingTop="30dp"
+            android:paddingBottom="90dp">
+
+            <!-- Bloc blanc : MOST EXPENSES -->
+            <LinearLayout
+                android:id="@+id/most_expense_block"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:background="@drawable/bg_white_rounded"
+                android:orientation="vertical"
+                android:padding="20dp">
+
                 <TextView
-                    android:id="@+id/label_other_expenses"
+                    android:id="@+id/label_most_expenses"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginBottom="8dp"
-                    android:text="Other Expenses"
+                    android:text="Most Expenses"
                     android:textColor="#000000"
                     android:textSize="16sp" />
 
                 <LinearLayout
-                    android:id="@+id/other_expenses_container"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center_vertical"
                     android:orientation="horizontal"
-                    android:padding="8dp">
+                    android:gravity="center_vertical">
 
                     <ImageView
-                        android:id="@+id/othersIcons"
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
-                        app:srcCompat="@drawable/rent" />
+                        android:id="@+id/most_expense_icon"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="29dp"
+                        app:srcCompat="@drawable/gros" />
 
                     <TextView
-                        android:id="@+id/others"
+                        android:id="@+id/most_expense_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="12dp"
-                        android:text="Rent:300 R"
-                        android:textColor="#000000" />
+                        android:layout_marginStart="16dp"
+                        android:text="Groceries:350 R"
+                        android:textColor="#000000"
+                        android:textSize="16sp" />
                 </LinearLayout>
 
             </LinearLayout>
-        </ScrollView>
+
+            <!-- Bloc cyan scrollable : OTHER EXPENSES -->
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="782dp"
+                android:layout_marginTop="135dp"
+                android:background="@drawable/cyancontent">
+
+                <LinearLayout
+                    android:id="@+id/others_expense_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/label_other_expenses"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="8dp"
+                        android:text="Other Expenses"
+                        android:textColor="#000000"
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:id="@+id/other_expenses_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" />
+                </LinearLayout>
+            </ScrollView>
     </FrameLayout>
 
     <!-- Bottom Navigation -->
